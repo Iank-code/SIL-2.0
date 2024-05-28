@@ -1,7 +1,8 @@
-"use client"
-import { Button } from "@/components/ui/button";
+"use client";
+import { useRouter } from "next/navigation";
 import Image from "next/image";
 import Link from "next/link";
+import AuthenticateButton from "@/components/authenticateButton/AuthenticateButton";
 
 const instructionData = [
   {
@@ -43,10 +44,11 @@ const instructionData = [
 
 const copyToClipboardFunction = (text: string) => {
   navigator.clipboard.writeText(text);
-  alert("Copied to clipboard")
+  alert("Copied to clipboard");
 };
 
 export default function Home() {
+  const router = useRouter();
   return (
     <main className="flex min-h-screen py-3 gap-8 justify-start px-10 max-[600px]:flex-col max-[600px]:px-5">
       <div className="flex flex-col w-1/2 gap-4 max-[600px]:w-full">
@@ -111,7 +113,8 @@ export default function Home() {
           width={400}
           height={400}
         />
-        <Button>Login with Google</Button>
+        <div></div>
+        <AuthenticateButton />
         <Link href="#">Don&apos;t have an account? Create account</Link>
       </div>
     </main>
