@@ -24,7 +24,7 @@ export default function ProductCard({
     >
       <div className="flex flex-col items-start">
         {image ? (
-          <Image src={image} alt="img.png" width={60} height={60} />
+          <Image src={image} alt="img.png" width={60} height={60} priority />
         ) : (
           <div>
             <h1 className="font-bold text-lg">{noOfPhotos}</h1>
