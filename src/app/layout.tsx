@@ -7,16 +7,16 @@ import store from "@/lib/store";
 import Head from "next/head";
 import { SessionProvider } from "next-auth/react";
 import Navbar from "@/components/navbar/Navbar";
+import { ReactNode } from "react";
 
 const inter = Inter({ subsets: ["latin"] });
 
-export default function RootLayout({
-  children,
-  session,
-}: Readonly<{
-  children: React.ReactNode;
-  session: any; // Add session type if known
-}>) {
+interface RootLayoutProps {
+  children: ReactNode;
+  session: any; // Add session type if known, or replace `any` with the correct type
+}
+
+export default function RootLayout({ children, session }: RootLayoutProps) {
   return (
     <html lang="en">
       <Head>
