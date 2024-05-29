@@ -1,7 +1,7 @@
 import { AvatarProfile } from "../avator/avator";
 import { Input } from "../ui/input";
 interface propTypes {
-  category: string;
+  category?: string;
   text: string;
   avatarName?: string;
   placeholder?: string;
