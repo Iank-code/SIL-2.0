@@ -6,7 +6,6 @@ import { AvatarProfile } from "../avator/avator";
 
 export default function Navbar() {
   const { data: session, status } = useSession();
-  console.log(status)
   return (
     <div className="flex items-center justify-between p-7 mb-5 shadow-md max-[600px]:p-3 ">
       <span className="font-bold text-2xl max-[600px]:text-sm max-[600px]:wrap">
