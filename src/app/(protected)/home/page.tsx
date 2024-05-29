@@ -5,7 +5,7 @@ import SearchWrapper from "@/components/wrappers/searchWrapper";
 import { user } from "../../../../types";
 import UserCard from "@/components/card/userCard";
 
-export default function page() {
+export default function Users() {
   const [numberOfAlbums, setNumberOfAlbums] = useState<any>([]);
   const [users, setUsers] = useState<user[]>([]);
 
@@ -37,37 +37,6 @@ export default function page() {
 
     fetchData();
   }, []);
-
-  useEffect(() => {
-    if (users) {
-      const fetchAlbums = async () => {
-        try {
-          const albumsPromises = users.map(async (user: user) => {
-            const { data: albums } = await useGetAlbumsByUserIdQuery(
-              user.id
-            ).unwrap();
-            return { userId: user.id, albumCount: albums.length };
-          });
-
-          const albumsData = await Promise.all(albumsPromises);
-          const albumsCount = albumsData.reduce(
-            (acc, { userId, albumCount }) => {
-              acc[userId] = albumCount;
-              return acc;
-            },
-            {} as { [key: number]: number }
-          );
-
-          setNumberOfAlbums(albumsCount);
-        } catch (error) {
-          console.error(error);
-        }
-      };
-
-      fetchAlbums();
-    }
-  }, [users]);
-
   return (
     <div>
       <SearchWrapper
