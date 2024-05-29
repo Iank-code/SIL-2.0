@@ -1,6 +1,6 @@
 import { Avatar, AvatarFallback } from "@/components/ui/avatar";
 
-export function AvatarProfile({ name }: { name: string }) {
+export function AvatarProfile({ name, bg }: { name: string; bg?: string }) {
   const abbName = function abbreviateName(fullName: string) {
     return fullName
       .split(" ")
@@ -13,7 +13,7 @@ export function AvatarProfile({ name }: { name: string }) {
   const abbreviatedName = abbName(name);
 
   return (
-    <Avatar>
+    <Avatar className={bg && `bg-${bg}`}>
       <AvatarFallback>{abbreviatedName}</AvatarFallback>
     </Avatar>
   );
