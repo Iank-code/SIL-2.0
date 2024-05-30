@@ -11,14 +11,12 @@ import "./globals.css";
 
 export default function RootLayout({
   children,
-  session,
-}: Readonly<{ children: React.ReactNode, session: any }>) {
-  console.log(typeof session)
+}: Readonly<{ children: React.ReactNode}>) {
   return (
     <html lang="en">
       <body className={inter.className}>
         <Provider store={store}>
-          <SessionProvider session={session} refetchInterval={2 * 60}>
+          <SessionProvider refetchInterval={2 * 60}>
             <Navbar />
             {children}
           </SessionProvider>
