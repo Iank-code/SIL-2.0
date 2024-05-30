@@ -16,7 +16,7 @@ export default function Navbar() {
           <AvatarProfile name={`${session.user!.name}`} />
           <h4 className="max-[600px]:hidden">{session.user!.name}</h4>
           <Button
-            onClick={() => signOut("google")}
+            onClick={() => signOut({callbackUrl: "/"})}
           >
             Logout
           </Button>
