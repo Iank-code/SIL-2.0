@@ -1,36 +1,63 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# SIL 2.0
 
-## Getting Started
+## Table of Contents
 
-First, run the development server:
+- [Introduction](#introduction)
+- [Prerequisites](#prerequisites)
+- [Setup Instructions](#setup-instructions)
+- [Running the Application](#running-the-application)
+- [Trello Board](#trello-board)
+- [License](#license)
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+# `Introduction`
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+This documentation provides a comprehensive guide on how to set up and run the Next.js application. Next.js is a React framework that enables functionality such as server-side rendering and static site generation.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+# `Prerequisites`
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+Before you begin, ensure you have met the following requirements:
 
-## Learn More
+- Node.js (version 12.0 or later)
+- npm or yarn (Node package managers)
+- Git (version control system)
 
-To learn more about Next.js, take a look at the following resources:
+# `Setup Instructions`
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### Step 1: Clone the repository
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+First, clone the repository to your local machine using Git.
 
-## Deploy on Vercel
+        git clone git@github.com:Iank-code/SIL-2.0.git
+        cd SIL-2.0
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+### Step 2: Install dependencies
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+Install the project dependencies using npm
+
+        npm install
+
+### Step 3: Create Environment Variables
+
+Create a `.env.local` file in the root directory and add your environment variables.
+
+        NEXT_PUBLIC_SERVER_URL="https://jsonplaceholder.typicode.com"
+        GOOGLE_CLIENT_ID="<YOUR GOOGLE CLIENT ID>"
+        GOOGLE_API_SECRET="<YOUR GOOGLE API SECRET>"
+
+### Step 4: Run the application
+
+Start the development server.
+
+        npm run dev
+
+# `Running the Application`
+
+After setting up, you can access the application at `http://localhost:3000`
+
+# `Trello Board`
+
+For project management and task tracking, please refer to my Trello board: [Project Trello Board](https://trello.com/b/GgF8qU5t/savannah-informatics-frontend-developer)
+
+# `License`
+
+This project is licensed under the MIT License. See the LICENSE file for more information.
