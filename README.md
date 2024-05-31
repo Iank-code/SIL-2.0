@@ -2,18 +2,18 @@
 
 ## Table of Contents
 
-- [Introduction](#build-your-own-introduction)
-- [Prerequisites](#build-your-own-prerequisites)
-- [Setup Instructions](#build-your-own-setup-instructions)
-- [Running the Application](#build-your-own-running-the-application)
-- [Trello Board](#build-your-own-trello-board)
-- [License](#build-your-own-license)
+- [Introduction](#introduction)
+- [Prerequisites](#prerequisites)
+- [Setup Instructions](#setup-instructions)
+- [Running the Application](#running-the-application)
+- [Trello Board](#trello-board)
+- [License](#license)
 
-# Build your own `Introduction`
+# `Introduction`
 
 This documentation provides a comprehensive guide on how to set up and run the Next.js application. Next.js is a React framework that enables functionality such as server-side rendering and static site generation.
 
-# Build your own `Prerequisites`
+# `Prerequisites`
 
 Before you begin, ensure you have met the following requirements:
 
@@ -21,7 +21,7 @@ Before you begin, ensure you have met the following requirements:
 - npm or yarn (Node package managers)
 - Git (version control system)
 
-# Build your own `Setup Instructions`
+# `Setup Instructions`
 
 ### Step 1: Clone the repository
 
@@ -50,14 +50,14 @@ Start the development server.
 
         npm run dev
 
-# Build your own `Running the Application`
+# `Running the Application`
 
 After setting up, you can access the application at `http://localhost:3000`
 
-# Build your own `Trello Board`
+# `Trello Board`
 
 For project management and task tracking, please refer to my Trello board: [Project Trello Board](https://trello.com/b/GgF8qU5t/savannah-informatics-frontend-developer)
 
-# Build your own `License`
+# `License`
 
 This project is licensed under the MIT License. See the LICENSE file for more information.
