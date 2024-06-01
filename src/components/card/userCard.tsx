@@ -13,7 +13,6 @@ interface propType {
 }
 // #DAE7FF4D
 export default function UserCard({ userData, albums }: propType) {
-  console.log(albums);
   return (
     <Link
       href={`/user/${userData.id}`}

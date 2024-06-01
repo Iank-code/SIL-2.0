@@ -21,6 +21,7 @@ export default function ProductCard({
     <Link
       href={name ? `/${name}/${id}` : "#"}
       className="flex flex-col gap-2 justify-flex-start bg-[#DAE7FF4D] rounded-md py-8 px-6 max-[600px]:text-sm flex-nowrap"
+      data-testid="product-link"
     >
       <div className="flex flex-col items-start">
         {image ? (
