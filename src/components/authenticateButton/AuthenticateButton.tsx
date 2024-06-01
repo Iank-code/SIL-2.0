@@ -5,7 +5,7 @@ import { Button } from "../ui/button";
 export default function AuthenticateButton() {
   const { data: session, status } = useSession();
   return (
-    <Button onClick={() => signIn("google")}>
+    <Button onClick={() => signIn("google", { callbackUrl: "/home" })}>
       {status === "authenticated"
         ? `Signed in as ${session.user!.email}`
         : "Login With Google"}
