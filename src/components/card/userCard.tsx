@@ -9,7 +9,7 @@ interface userData {
 }
 interface propType {
   userData: userData;
-  albums?: any;
+  albums?: number;
 }
 // #DAE7FF4D
 export default function UserCard({ userData, albums }: propType) {
@@ -27,7 +27,7 @@ export default function UserCard({ userData, albums }: propType) {
           {userData.email}
         </span>
         <span className="text-md max-[600px]:text-sm">
-          {albums && albums.length} albums
+          {albums && albums} albums
         </span>
       </div>
     </Link>

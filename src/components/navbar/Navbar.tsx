@@ -3,6 +3,7 @@ import { useSession, signOut } from "next-auth/react";
 import AuthenticateButton from "../authenticateButton/AuthenticateButton";
 import { Button } from "../ui/button";
 import { AvatarProfile } from "../avator/avator";
+import Link from "next/link";
 
 export default function Navbar() {
   const { data: session, status } = useSession();
@@ -13,13 +14,10 @@ export default function Navbar() {
       </span>
       {session ? (
         <div className="flex items-center gap-4">
+          <Link href="/home"> Home </Link>
           <AvatarProfile name={`${session.user!.name}`} />
           <h4 className="max-[600px]:hidden">{session.user!.name}</h4>
-          <Button
-            onClick={() => signOut({callbackUrl: "/"})}
-          >
-            Logout
-          </Button>
+          <Button onClick={() => signOut({ callbackUrl: "/" })}>Logout</Button>
         </div>
       ) : (
         <div>

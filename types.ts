@@ -11,11 +11,11 @@ export interface user {
   email: string;
 }
 
-export interface album {
+export type album = {
   id: number;
   title: string;
   userId: number;
-}
+};
 
 export interface userPropType {
   user: user;
