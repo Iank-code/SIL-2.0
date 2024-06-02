@@ -5,6 +5,8 @@ interface propTypes {
   text: string;
   avatarName?: string;
   placeholder?: string;
+  search: string;
+  setSearch: any;
 }
 
 export default function SearchWrapper({
@@ -12,9 +14,11 @@ export default function SearchWrapper({
   text,
   avatarName,
   placeholder,
+  search,
+  setSearch,
 }: propTypes) {
   return (
-    <div className="flex flex-col w-[90%] justify-center gap-5 items-start px-12 bg-[#DAE7FF4D] py-16">
+    <div className="flex flex-col w-[90%] justify-center gap-5 items-center px-12 bg-[#DAE7FF4D] py-16">
       <div className="flex items-center gap-3">
         {avatarName && <AvatarProfile name={`${avatarName}`} />}
         <div>
@@ -25,6 +29,8 @@ export default function SearchWrapper({
 
       <Input
         type="text"
+        value={search}
+        onChange={(e) => setSearch(e.target.value)}
         placeholder={
           placeholder
             ? placeholder
