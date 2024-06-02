@@ -17,7 +17,7 @@ This documentation provides a comprehensive guide on how to set up and run the N
 
 Before you begin, ensure you have met the following requirements:
 
-- Node.js (version 12.0 or later)
+- Node.js version 20
 - npm or yarn (Node package managers)
 - Git (version control system)
 
