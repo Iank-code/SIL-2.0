@@ -62,7 +62,6 @@ export default function PhotoPage({ params }: { params: { id: string } }) {
       console.log(error);
     }
   };
-  console.log(photo);
   return (
     <div>
       <div className="grid grid-cols-5 gap-7 px-10 py-20 max-[600px]:grid-cols-2 max-[600px]:px-3 max-[600px]:gap-3 max-[930px]:grid-cols-3">

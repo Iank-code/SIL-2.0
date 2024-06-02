@@ -7,6 +7,8 @@ import { album } from "../../../../../types";
 
 export default function UserPage({ params }: { params: { id: string } }) {
   const [albums, setAlbums] = useState<album[]>([]);
+  const [newAlbums, setNewAlbums] = useState<album[]>([]);
+  const [search, setSearch] = useState<string>("");
   const [numberOfPhotosInAlbums, setNumberOfPhotosInAlbums] = useState<{
     [key: number]: number;
   }>({});
@@ -32,6 +34,7 @@ export default function UserPage({ params }: { params: { id: string } }) {
           return;
         }
         setAlbums(albumsResponse.data);
+        setNewAlbums(albumsResponse.data);
 
         // Getting number of photos in each album
         const albumsPhotosPromises = albumsResponse.data.map((album: album) =>
@@ -58,6 +61,17 @@ export default function UserPage({ params }: { params: { id: string } }) {
     fetchData();
   }, [params.id]);
 
+  useEffect(() => {
+    if (search !== "") {
+      let filteredData = albums.filter((album) => {
+        return album.title.toLowerCase().includes(search.toLowerCase());
+      });
+      setNewAlbums(filteredData);
+    } else {
+      setNewAlbums(albums);
+    }
+  }, [search]);
+
   return (
     <div>
       <SearchWrapper
@@ -65,11 +79,13 @@ export default function UserPage({ params }: { params: { id: string } }) {
         text={user && user.email}
         avatarName={user && user.name}
         placeholder="Type any album name"
+        search={search}
+        setSearch={setSearch}
       />
 
       <div className="grid grid-cols-5 gap-7 px-10 py-20 max-[600px]:grid-cols-2 max-[600px]:px-3 max-[600px]:gap-3 max-[930px]:grid-cols-3">
-        {albums &&
-          albums.map((album: album) => (
+        {newAlbums &&
+          newAlbums.map((album: album) => (
             <ProductCard
               key={album.id}
               id={album.id}
