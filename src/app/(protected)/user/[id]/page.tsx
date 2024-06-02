@@ -70,7 +70,7 @@ export default function UserPage({ params }: { params: { id: string } }) {
     } else {
       setNewAlbums(albums);
     }
-  }, [search]);
+  }, [search, albums]);
 
   return (
     <div>

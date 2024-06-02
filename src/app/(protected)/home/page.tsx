@@ -49,7 +49,7 @@ export default function Users() {
     }else{
       setNewUsers(users);
     }
-  }, [search]);
+  }, [search, users]);
   return (
     <div>
       <SearchWrapper
