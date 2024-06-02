@@ -57,7 +57,7 @@ export default function AlbumPage({ params }: { params: { id: string } }) {
     } else {
       setNewPhotos(photos);
     }
-  }, [search]);
+  }, [search, photos]);
   return (
     <div>
       <SearchWrapper
